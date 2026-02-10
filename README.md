@@ -7,26 +7,28 @@
 [![Deep Learning: TensorFlow](https://img.shields.io/badge/Deep%20Learning-TensorFlow-FF6F00.svg)](https://wwww.tensorflow.org/)
 [![Scikit-learn](https://img.shields.io/badge/Machine%20Learning-Scikit--learn-F7931E.svg)](https://scikit-learn.org/)
 
-Ce projet est une solution complète d'analyse de sentiment pour les avis Amazon, allant de la génération de données synthétiques représentatives à la modélisation par Deep Learning (LSTM), avec des visualisations interactives.
+Ce projet est une solution complète d'analyse de sentiment pour les avis Amazon, intégrant un dashboard ultra-moderne.
 
 ## Fonctionnalités
 
-- **EDA Interactive** : Analyse exploratoire approfondie avec des graphiques **Plotly** (distribution des notes, sentiments par produit).
-- **Modélisation Avancée** : Architecture de réseau de neurones récurrents (**LSTM**) pour la classification de texte.
-- **Gestion Moderne** : Utilisation de **uv** pour une gestion des dépendances ultra-rapide et reproductible.
+- **Dashboard Streamlit** : Interface avec **glassmorphism** pour le monitorage en temps réel de la précision et de l'impact des mots-clés.
+- **Génération de Données** : Dataset de 10 000 avis avec répartition réaliste des sentiments.
+- **EDA Interactive** : Analyse exploratoire approfondie avec des graphiques **Plotly**.
+- **Modélisation Avancée** : Architecture **LSTM** pour la classification de texte.
+- **Gestion Moderne** : Utilisation de **uv** pour une performance optimale.
 
 ## Structure du Projet
 
-- `data/` : Contient `amazon_reviews.csv` (10k reviews).
+- `data/` : Contient `amazon_reviews.csv`.
 - `notebooks/` :
-  - `01_eda.ipynb` : Analyse visuelle et statistique des données.
-  - `02_modeling.ipynb` : Prétraitement, architecture LSTM et évaluation.
-- `generate_data.py` : Script Python pour régénérer le dataset.
-- `pyproject.toml` & `uv.lock` : Fichiers de configuration de l'environnement.
+  - `01_eda.ipynb` : Analyse visuelle et statistique.
+  - `02_modeling.ipynb` : Architecture LSTM et évaluation.
+- `dashboard.py` : Dashboard Streamlit moderne.
+- `generate_data.py` : Script de génération des données.
 
 ## Installation
 
-Le projet utilise [uv](https://github.com/astral-sh/uv) pour la gestion des packages.
+Le projet utilise [uv](https://github.com/astral-sh/uv).
 
 1. **Cloner le projet** :
 
@@ -41,20 +43,33 @@ Le projet utilise [uv](https://github.com/astral-sh/uv) pour la gestion des pack
    uv sync
    ```
 
+3. **Générer les données** :
+
+   ```bash
+   uv run generate_data.py
+   ```
+
 ## Utilisation
 
-Pour lancer les notebooks dans un environnement isolé :
+### Dashboard Temps Réel
+
+```bash
+uv run streamlit run dashboard.py
+```
+
+### Notebooks
 
 ```bash
 uv run jupyter notebook
 ```
 
-Ouvrez ensuite `notebooks/eda.ipynb` pour l'analyse ou `notebooks/modeling.ipynb` pour l'entraînement.
+Ouvrez `notebooks/01_eda.ipynb` ou `notebooks/02_modeling.ipynb`.
 
 ## Résultats
 
-Les visualisations Plotly permettent de suivre en temps réel :
+- Précision et perte en direct sur le dashboard.
+- Impact des mots-clés sur la polarité des sentiments.
+- Graphiques interactifs pour l'exploration des données.
 
-- La précision (Accuracy) et la perte (Loss) durant l'entraînement.
-- La répartition des sentiments pour chaque catégorie de produits.
-- L'impact des mots-clés sur la classification.
+---
+Développé pour l'analyse de données Deep Learning.
