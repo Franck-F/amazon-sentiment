@@ -49,7 +49,7 @@ Pour lancer les notebooks dans un environnement isolé :
 uv run jupyter notebook
 ```
 
-Ouvrez ensuite `notebooks/01_eda.ipynb` pour l'analyse ou `notebooks/02_modeling.ipynb` pour l'entraînement.
+Ouvrez ensuite `notebooks/eda.ipynb` pour l'analyse ou `notebooks/modeling.ipynb` pour l'entraînement.
 
 ## Résultats
 
