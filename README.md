@@ -13,7 +13,6 @@ Ce projet vise à analyser les sentiments des commentaires Amazon à l'aide de t
 - `notebooks/` :
   - `01_eda.ipynb` : Analyse exploratoire des données avec Plotly.
   - `02_modeling.ipynb` : Construction et entraînement du modèle de sentiment (LSTM).
-- `generate_data.py` : Script de génération des données synthétiques.
 
 ## Installation
 
@@ -28,12 +27,6 @@ Ce projet vise à analyser les sentiments des commentaires Amazon à l'aide de t
 
    ```bash
    pip install pandas plotly numpy tensorflow scikit-learn
-   ```
-
-3. Générez les données :
-
-   ```bash
-   python generate_data.py
    ```
 
 ## Utilisation

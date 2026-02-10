@@ -1,0 +1,15 @@
+[project]
+name = "amazon-sentiment"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ipykernel>=7.2.0",
+    "nbformat>=5.10.4",
+    "numpy>=2.4.2",
+    "pandas>=3.0.0",
+    "plotly>=6.5.2",
+    "scikit-learn>=1.8.0",
+    "tensorflow>=2.20.0",
+]
