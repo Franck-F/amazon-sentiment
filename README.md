@@ -9,14 +9,13 @@
 
 Ce projet est une solution complète d'analyse de sentiment pour les avis Amazon, allant de la génération de données synthétiques représentatives à la modélisation par Deep Learning (LSTM), avec des visualisations interactives.
 
-## 🚀 Fonctionnalités
+## Fonctionnalités
 
-- **Génération de Données** : Création d'un dataset de 10 000 avis avec répartition réaliste des sentiments (Positive, Neutre, Négative).
 - **EDA Interactive** : Analyse exploratoire approfondie avec des graphiques **Plotly** (distribution des notes, sentiments par produit).
 - **Modélisation Avancée** : Architecture de réseau de neurones récurrents (**LSTM**) pour la classification de texte.
 - **Gestion Moderne** : Utilisation de **uv** pour une gestion des dépendances ultra-rapide et reproductible.
 
-## 📂 Structure du Projet
+## Structure du Projet
 
 - `data/` : Contient `amazon_reviews.csv` (10k reviews).
 - `notebooks/` :
@@ -25,7 +24,7 @@ Ce projet est une solution complète d'analyse de sentiment pour les avis Amazon
 - `generate_data.py` : Script Python pour régénérer le dataset.
 - `pyproject.toml` & `uv.lock` : Fichiers de configuration de l'environnement.
 
-## 🛠️ Installation
+## Installation
 
 Le projet utilise [uv](https://github.com/astral-sh/uv) pour la gestion des packages.
 
@@ -42,13 +41,7 @@ Le projet utilise [uv](https://github.com/astral-sh/uv) pour la gestion des pack
    uv sync
    ```
 
-3. **Générer les données (optionnel)** :
-
-   ```bash
-   uv run generate_data.py
-   ```
-
-## 📈 Utilisation
+## Utilisation
 
 Pour lancer les notebooks dans un environnement isolé :
 
@@ -58,13 +51,10 @@ uv run jupyter notebook
 
 Ouvrez ensuite `notebooks/01_eda.ipynb` pour l'analyse ou `notebooks/02_modeling.ipynb` pour l'entraînement.
 
-## 📊 Résultats
+## Résultats
 
 Les visualisations Plotly permettent de suivre en temps réel :
 
 - La précision (Accuracy) et la perte (Loss) durant l'entraînement.
 - La répartition des sentiments pour chaque catégorie de produits.
 - L'impact des mots-clés sur la classification.
-
----
-Développé avec ❤️ pour l'analyse de données Deep Learning.
